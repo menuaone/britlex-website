@@ -1,0 +1,118 @@
+// button type style
+
+@mixin mybutton($color_1, $color_2) {
+  padding: 18px 90px;
+  border: 1px solid $color_1;
+  border-radius: 4px;
+  background-color: $color_1;
+
+  color: $color_2;
+  transition: $transition;
+
+  &:hover {
+    background-color: $color_2;
+    border-color: $color_1;
+    color: $color_1;
+  }
+  &:active {
+    background-color: $color_1;
+    border-color: $color_2;
+    color: $color_2;
+    box-shadow: none;
+  }
+  &:focus,
+  &:active:focus {
+    background-color: $color_1;
+    border-color: $color_1;
+    color: $color_2;
+  }
+  &:visited {
+    background-color: $color_1;
+    border-color: $color_2;
+  }
+}
+
+// button with border
+
+@mixin borderbtn($color_1, $color_2) {
+  padding: 12px 40px;
+  border: 2px solid $color_2;
+  border-radius: 4px;
+  background-color: $color_1;
+
+  color: $color_2;
+  transition: $transition;
+
+  &:hover {
+    background-color: $color_2;
+    border-color: $color_2;
+    color: $color_1;
+  }
+  &:active {
+    background-color: $color_1;
+    border-color: $color_2;
+    color: $color_2;
+    box-shadow: none;
+  }
+  &:focus,
+  &:active:focus {
+    background-color: $color_1;
+    border-color: $color_2;
+    color: $color_2;
+  }
+  &:visited {
+    background-color: $color_1;
+    border-color: $color_2;
+  }
+}
+
+// media
+
+// 1920
+@mixin mediaFullHd {
+  @media screen and (min-width: $fullhd) {
+    @content;
+  }
+}
+
+// 1440
+@mixin mediaScreen {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}
+
+//  992
+@mixin mediaTablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+//  767
+@mixin mediaSTablet {
+  @media screen and (min-width: $stablet) {
+    @content;
+  }
+}
+
+//  576
+@mixin mediaXSTablet {
+  @media screen and (min-width: $xstablet) {
+    @content;
+  }
+}
+
+//    //  440
+//    @mixin mediaPhoneMax{
+//        @media screen and (min-width: $phonemax) {
+//            @content;
+//            }
+//   }
+
+//  320
+@mixin mediaPhones {
+  @media screen and (min-width: $phone) {
+    @content;
+  }
+}

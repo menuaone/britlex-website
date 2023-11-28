@@ -1,0 +1,108 @@
+.head {
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mediaSTablet {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.image-box {
+  min-width: 299px;
+  max-width: 661px;
+
+  @include mediaXSTablet {
+    padding: 11px 46px;
+  }
+
+  @include mediaSTablet {
+    padding: 0;
+  }
+}
+
+.text-box {
+  text-align: center;
+  @include mediaSTablet {
+    text-align: start;
+  }
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+
+  margin-bottom: 20px;
+
+  min-width: 220px;
+
+  @include mediaXSTablet {
+    margin-bottom: 26px;
+    font-size: 34px;
+  }
+
+  @include mediaSTablet {
+    width: 217px;
+    text-align: start;
+    font-size: 36px;
+    margin-top: 29px;
+  }
+
+  @include mediaTablet {
+    width: 290px;
+    font-size: 48px;
+    line-height: 64px;
+    margin-top: 29px;
+  }
+
+  @include mediaScreen {
+    width: 386px;
+    font-size: 64px;
+    line-height: 80px;
+  }
+}
+
+.head__text {
+  margin-bottom: 35px;
+
+  @include mediaSTablet {
+    width: 335px;
+    font-size: 16px;
+  }
+
+  @include mediaTablet {
+    width: 335px;
+    font-size: 20px;
+  }
+}
+
+.head__btn {
+  font-size: 16px;
+
+  @include mybutton($accent, $main);
+
+  @include mediaXSTablet {
+    padding: 24px 101px;
+  }
+
+  @include mediaSTablet {
+    padding: 19px 67px;
+  }
+
+  @include mediaSTablet {
+    padding: 22px 78px;
+  }
+
+  @include mediaScreen {
+    padding: 32px 117px;
+    border-radius: 20px;
+  }
+}
