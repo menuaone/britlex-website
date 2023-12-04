@@ -9,15 +9,17 @@ body {
 
 .container {
   min-width: 320px;
+  max-width: 1920px;
   padding: 0 15px;
   overflow-x: hidden;
+  margin: 0 auto;
 
   @include mediaXSTablet {
     padding: 0 32px;
   }
 
   @include mediaScreen {
-    padding: 0 129px;
+    padding: 0 200px;
   }
 }
 

@@ -14,9 +14,9 @@
     justify-content: space-between;
     align-items: center;
 
-    @include mediaFullHd {
-      justify-content: space-around;
-    }
+    // @include mediaFullHd {
+    //   justify-content: space-around;
+    // }
   }
 }
 

@@ -114,8 +114,10 @@ body {
 
 .container {
   min-width: 320px;
+  max-width: 1920px;
   padding: 0 15px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 @media screen and (min-width: 576px) {
   .container {
@@ -124,7 +126,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .container {
-    padding: 0 129px;
+    padding: 0 200px;
   }
 }
 
@@ -172,12 +174,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (min-width: 1920px) {
-  .header__inner {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
 }
 
 .nav {
@@ -364,26 +360,41 @@ body {
         flex-wrap: nowrap;
   }
 }
+@media screen and (min-width: 992px) {
+  .head__inner {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 @media screen and (min-width: 1920px) {
   .head__inner {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 .image-box {
   min-width: 299px;
-  max-width: 661px;
 }
 @media screen and (min-width: 576px) {
-  .image-box {
-    padding: 11px 46px;
+  .image-box img {
+    max-width: 424px;
   }
 }
 @media screen and (min-width: 767px) {
-  .image-box {
+  .image-box img {
     padding: 0;
+    max-width: 352px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .image-box img {
+    max-width: 460px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .image-box img {
+    max-width: 661px;
   }
 }
 
@@ -393,6 +404,32 @@ body {
 @media screen and (min-width: 767px) {
   .text-box {
     text-align: start;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .title__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 320px) {
+  .title__box img {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .title__box img {
+    display: block;
+    width: 58px;
+    -webkit-box-pack: bt;
+        -ms-flex-pack: bt;
+            justify-content: bt;
   }
 }
 
@@ -430,6 +467,7 @@ body {
     width: 400px;
     font-size: 64px;
     line-height: 80px;
+    margin-bottom: 40px;
   }
 }
 
@@ -451,6 +489,7 @@ body {
 @media screen and (min-width: 1440px) {
   .head__text {
     width: 460px;
+    margin-bottom: 40px;
   }
 }
 
@@ -504,6 +543,7 @@ body {
   .head__btn {
     padding: 32px 117px;
     border-radius: 20px;
+    font-size: 36px;
   }
 }
 
@@ -516,6 +556,16 @@ body {
   font-weight: 600;
   line-height: 80px;
 }
+@media screen and (min-width: 992px) {
+  .skills .h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .skills .h2 {
+    font-size: 48px;
+  }
+}
 .skills__inner {
   padding: 40px 0;
   display: grid;
@@ -525,7 +575,7 @@ body {
 @media screen and (min-width: 576px) {
   .skills__inner {
     grid-template-areas: "one two" "three four";
-    gap: 30px;
+    gap: 15px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -543,9 +593,9 @@ body {
 @media screen and (min-width: 1440px) {
   .skills__inner {
     gap: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .skills__inner .speaking {
@@ -611,6 +661,21 @@ body {
     padding: 20px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .skills__card-item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px 40px 20px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .skills__card-content {
+    min-width: 195px;
+    font-size: 16px;
+  }
+}
 
 .skills__card-img {
   display: -webkit-box;
@@ -619,6 +684,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 .skills__card-img img {
   width: 100%;
@@ -629,6 +695,11 @@ body {
   font-weight: 600;
   line-height: 80px;
 }
+@media screen and (min-width: 576px) {
+  .h3 {
+    font-size: 18px;
+  }
+}
 @media screen and (min-width: 767px) {
   .h3 {
     font-size: 20px;
@@ -636,20 +707,12 @@ body {
 }
 
 .skills__card-text {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 258px;
-  width: 100%;
-}
-@media screen and (min-width: 576px) {
-  .skills__card-text {
-    min-width: 214px;
-  }
 }
 @media screen and (min-width: 767px) {
   .skills__card-text {
-    min-width: 195px;
-    max-width: 320px;
+    font-size: 16px;
   }
 }
 
@@ -692,6 +755,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .skills__card-btn {
-    margin-top: 30px;
+    padding: 17px 63px;
+    margin-top: 40px;
   }
 }

@@ -6,6 +6,14 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 80px;
+
+    @include mediaTablet {
+      font-size: 36px;
+    }
+
+    @include mediaScreen {
+      font-size: 48px;
+    }
   }
   &__inner {
     padding: 40px 0;
@@ -25,7 +33,7 @@
         "one two"
         "three four";
 
-      gap: 30px;
+      gap: 15px;
 
       justify-content: space-between;
     }
@@ -42,7 +50,8 @@
 
     @include mediaScreen {
       gap: 20px;
-      justify-content: center;
+
+      justify-content: space-between;
     }
 
     & .speaking {
@@ -91,14 +100,27 @@
     border-radius: 10px;
     padding: 20px;
   }
+
+  @include mediaScreen {
+    justify-content: space-between;
+    padding: 0px 40px 20px;
+  }
+}
+
+.skills__card-content {
+  @include mediaSTablet {
+    min-width: 195px;
+    font-size: 16px;
+
+    // max-width: 500px;
+  }
 }
 
 .skills__card-img {
   display: flex;
   align-items: center;
 
-  //   width: 100%;
-  //   margin: 0 auto;
+  width: 100%;
 
   & img {
     width: 100%;
@@ -110,24 +132,22 @@
   font-weight: 600;
   line-height: 80px;
 
+  @include mediaXSTablet {
+    font-size: 18px;
+  }
+
   @include mediaSTablet {
     font-size: 20px;
   }
 }
 
 .skills__card-text {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  min-width: 258px;
-  width: 100%;
-
-  @include mediaXSTablet {
-    min-width: 214px;
-  }
+  // width: 100%;
 
   @include mediaSTablet {
-    min-width: 195px;
-    max-width: 320px;
+    font-size: 16px;
   }
 }
 
@@ -142,6 +162,7 @@
   }
 
   @include mediaScreen {
-    margin-top: 30px;
+    padding: 17px 63px;
+    margin-top: 40px;
   }
 }
