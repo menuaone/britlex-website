@@ -1,0 +1,147 @@
+.skills {
+  padding: 50px 0px;
+
+  & .h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 80px;
+  }
+  &__inner {
+    padding: 40px 0;
+
+    display: grid;
+
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+
+    gap: 21px;
+
+    @include mediaXSTablet {
+      grid-template-areas:
+        "one two"
+        "three four";
+
+      gap: 30px;
+
+      justify-content: space-between;
+    }
+
+    @include mediaSTablet {
+      grid-template-areas:
+        "one two three"
+        "one four four";
+
+      gap: 18px;
+
+      align-items: stretch;
+    }
+
+    @include mediaScreen {
+      gap: 20px;
+      justify-content: center;
+    }
+
+    & .speaking {
+      grid-area: one;
+
+      @include mediaSTablet {
+        justify-content: space-evenly;
+      }
+    }
+    & .writing {
+      grid-area: two;
+    }
+    & .reading {
+      grid-area: three;
+    }
+    & .listening {
+      grid-area: four;
+
+      @include mediaSTablet {
+        flex-direction: row;
+
+        & .skills__card-img {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+.skills__card-item {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-box;
+  border-radius: 5px;
+  padding: 8px 16px 44px;
+  //   border: solid 3px red;
+
+  @include mediaXSTablet {
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 12px 27px;
+  }
+
+  @include mediaSTablet {
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+.skills__card-img {
+  display: flex;
+  align-items: center;
+
+  //   width: 100%;
+  //   margin: 0 auto;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.h3 {
+  color: $accent;
+  font-weight: 600;
+  line-height: 80px;
+
+  @include mediaSTablet {
+    font-size: 20px;
+  }
+}
+
+.skills__card-text {
+  font-size: 13px;
+  font-weight: 400;
+  min-width: 258px;
+  width: 100%;
+
+  @include mediaXSTablet {
+    min-width: 214px;
+  }
+
+  @include mediaSTablet {
+    min-width: 195px;
+    max-width: 320px;
+  }
+}
+
+.skills__card-btn {
+  @include mybutton($accent, $main);
+  padding: 14px 43px;
+
+  margin-top: 21px;
+
+  @include mediaSTablet {
+    margin-top: 15px;
+  }
+
+  @include mediaScreen {
+    margin-top: 30px;
+  }
+}

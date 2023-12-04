@@ -12,6 +12,10 @@
       justify-content: space-between;
       flex-wrap: nowrap;
     }
+
+    @include mediaFullHd {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -64,7 +68,7 @@
   }
 
   @include mediaScreen {
-    width: 386px;
+    width: 400px;
     font-size: 64px;
     line-height: 80px;
   }
@@ -81,6 +85,10 @@
   @include mediaTablet {
     width: 335px;
     font-size: 20px;
+  }
+
+  @include mediaScreen {
+    width: 460px;
   }
 }
 
