@@ -1,5 +1,5 @@
 .skills {
-  padding: 50px 0px;
+  margin: 50px 0px;
 
   & .h2 {
     text-align: center;
@@ -16,7 +16,7 @@
     }
   }
   &__inner {
-    padding: 40px 0;
+    // padding: 40px 0;
 
     display: grid;
 
@@ -45,13 +45,11 @@
 
       gap: 18px;
 
-      align-items: stretch;
+      // align-items: stretch;
     }
 
     @include mediaScreen {
       gap: 20px;
-
-      justify-content: space-between;
     }
 
     & .speaking {
@@ -98,7 +96,7 @@
   @include mediaSTablet {
     justify-content: space-between;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
   }
 
   @include mediaScreen {
@@ -120,10 +118,14 @@
   display: flex;
   align-items: center;
 
-  width: 100%;
+  // width: 100%;
 
   & img {
     width: 100%;
+
+    // @include mediaXSTablet {
+    //   width: 70%;
+    // }
   }
 }
 
@@ -139,6 +141,14 @@
   @include mediaSTablet {
     font-size: 20px;
   }
+
+  @include mediaTablet {
+    font-size: 22px;
+  }
+
+  @include mediaTablet {
+    font-size: 30px;
+  }
 }
 
 .skills__card-text {
@@ -147,6 +157,9 @@
   // width: 100%;
 
   @include mediaSTablet {
+    font-size: 13px;
+  }
+  @include mediaTablet {
     font-size: 16px;
   }
 }

@@ -14,7 +14,7 @@
     }
 
     @include mediaTablet {
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     @include mediaFullHd {
@@ -33,12 +33,11 @@
     }
 
     @include mediaSTablet {
-      padding: 0;
       max-width: 352px;
     }
 
     @include mediaTablet {
-      max-width: 460px;
+      max-width: 500px;
     }
 
     @include mediaScreen {
@@ -68,8 +67,12 @@
 
     @include mediaSTablet {
       display: block;
-      width: 58px;
-      justify-content: bt;
+      max-width: 58px;
+    }
+
+    @include mediaScreen {
+      display: block;
+      max-width: 85px;
     }
   }
 }
@@ -119,7 +122,7 @@
   }
 
   @include mediaTablet {
-    width: 335px;
+    width: 360px;
     font-size: 20px;
   }
 
