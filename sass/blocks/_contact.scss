@@ -1,0 +1,201 @@
+.contact {
+  margin-top: 30px;
+  margin-bottom: 57px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+
+    @include mediaSTablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    @include mediaScreen {
+      gap: 40px;
+    }
+
+    @include mediaFullHd {
+      justify-content: space-evenly;
+    }
+  }
+  & .h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 80px;
+
+    margin-bottom: 30px;
+
+    @include mediaXSTablet {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 80px;
+
+      margin-bottom: 50px;
+    }
+
+    @include mediaSTablet {
+      display: none;
+    }
+  }
+}
+
+.h2__flex {
+  display: none;
+  text-align: start;
+
+  @include mediaSTablet {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  @include mediaTablet {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  @include mediaScreen {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  @include mediaFullHd {
+    font-size: 56px;
+    margin-bottom: 70px;
+  }
+}
+
+.contact__img-box {
+  width: 100%;
+  height: 100%;
+
+  max-width: 253px;
+  //   height: 228px;
+  margin-bottom: 20px;
+
+  @include mediaXSTablet {
+    min-width: 358px;
+    // height: 322px;
+  }
+
+  @include mediaSTablet {
+    min-width: 233px;
+    // height: 210px;
+  }
+
+  @include mediaTablet {
+    min-width: 312px;
+    // height: 210px;
+  }
+
+  @include mediaScreen {
+    min-width: 477px;
+  }
+
+  @include mediaFullHd {
+    min-width: 550px;
+  }
+
+  & .contact__img-item {
+    margin-top: 40px;
+  }
+}
+
+.contact__text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 31px;
+
+  @include mediaXSTablet {
+    max-width: 430px;
+  }
+
+  @include mediaSTablet {
+    text-align: left;
+  }
+
+  @include mediaTablet {
+    font-size: 16px;
+  }
+
+  @include mediaScreen {
+    max-width: 600px;
+    font-size: 20px;
+
+    margin-bottom: 60px;
+  }
+}
+
+.form__inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mediaXSTablet {
+    flex-direction: row;
+  }
+
+  & input {
+    border-radius: 5px;
+    border: 1px solid #8f95a5;
+    padding: 16px 26px;
+    margin-bottom: 16px;
+
+    @include mediaXSTablet {
+      width: 318px;
+      height: 60px;
+      border-radius: 10px;
+      margin-bottom: 0px;
+      padding: 20px 26px;
+    }
+    @include mediaSTablet {
+      width: 283px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    @include mediaTablet {
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+
+    @include mediaScreen {
+      width: 450px;
+      height: 80px;
+    }
+  }
+
+  & .contact__btn {
+    font-size: 16px;
+    text-align: center;
+
+    @include mybutton($accent, $main);
+
+    @include mediaXSTablet {
+      padding: 15px 56px;
+      border-radius: 10px;
+    }
+
+    @include mediaSTablet {
+      padding: 11px 40px;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    @include mediaTablet {
+      border-radius: 10px;
+    }
+
+    @include mediaScreen {
+      padding: 25px 82px;
+      font-size: 20px;
+    }
+  }
+}

@@ -2,6 +2,16 @@
   text-align: center;
   margin-bottom: 70px;
 
+  @include mediaScreen {
+    margin-top: 100px;
+  }
+
+  @include mediaFullHd {
+    margin-top: 150px;
+
+    margin-bottom: 150px;
+  }
+
   & .h2 {
     font-size: 24px;
     font-weight: 600;
@@ -27,6 +37,9 @@
       justify-content: space-between;
       align-items: center;
     }
+    @include mediaFullHd {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -45,6 +58,18 @@
     @include mediaSTablet {
       max-width: 295px;
     }
+
+    @include mediaTablet {
+      max-width: 336px;
+    }
+
+    @include mediaScreen {
+      max-width: 500px;
+    }
+
+    @include mediaFullHd {
+      max-width: 600px;
+    }
   }
 }
 
@@ -57,6 +82,21 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 80px;
+  }
+
+  @include mediaTablet {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  @include mediaScreen {
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+
+  @include mediaFullHd {
+    font-size: 56px;
+    margin-bottom: 35px;
   }
 }
 
@@ -74,12 +114,39 @@
     margin-bottom: 10px;
     max-width: 321px;
   }
+
+  @include mediaTablet {
+    margin-bottom: 16px;
+    max-width: 550px;
+  }
+
+  @include mediaScreen {
+    margin-bottom: 35px;
+    font-size: 20px;
+    max-width: 600px;
+  }
+
+  @include mediaFullHd {
+    margin-bottom: 40px;
+    font-size: 23px;
+    max-width: 650px;
+  }
 }
 
 .about__info {
   @include mediaXSTablet {
     display: flex;
     justify-content: space-around;
+  }
+
+  @include mediaTablet {
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  @include mediaScreen {
+    justify-content: flex-start;
+    gap: 100px;
   }
 
   & .h4 {
@@ -91,6 +158,14 @@
     @include mediaSTablet {
       font-size: 22px;
     }
+
+    @include mediaTablet {
+      font-size: 30px;
+    }
+
+    @include mediaScreen {
+      font-size: 48px;
+    }
   }
 
   & .item__text {
@@ -99,6 +174,13 @@
 
     @include mediaSTablet {
       font-size: 13px;
+    }
+    @include mediaTablet {
+      font-size: 16px;
+    }
+
+    @include mediaScreen {
+      font-size: 20px;
     }
   }
 }

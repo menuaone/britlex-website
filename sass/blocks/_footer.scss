@@ -1,0 +1,46 @@
+.footer {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+
+    @include mediaXSTablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.gray__line {
+  //   max-width: 1338px;
+  width: 100%;
+  min-width: 290px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #c4c4c4;
+}
+
+.logo {
+  margin-bottom: 15px;
+  @include mediaSTablet {
+    margin-bottom: 0;
+  }
+}
+.footer__term {
+  font-size: 11px;
+
+  @include mediaXSTablet {
+    font-size: 12px;
+  }
+  @include mediaSTablet {
+    font-size: 13px;
+  }
+  @include mediaTablet {
+    font-size: 16px;
+  }
+  @include mediaScreen {
+    font-size: 24px;
+  }
+}

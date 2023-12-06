@@ -1,0 +1,233 @@
+.pricing {
+  margin-top: 20px;
+  margin-bottom: 72px;
+
+  @include mediaFullHd {
+    margin-bottom: 150px;
+  }
+
+  & .h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 80px;
+
+    margin-bottom: 30px;
+
+    @include mediaXSTablet {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 80px;
+
+      margin-bottom: px;
+    }
+
+    @include mediaTablet {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 80px;
+
+      margin-bottom: 45px;
+    }
+
+    @include mediaScreen {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 80px;
+
+      margin-bottom: 55px;
+    }
+
+    @include mediaFullHd {
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 80px;
+
+      margin-bottom: 90px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+
+    @include mediaSTablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.pricing__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  @include mediaSTablet {
+    text-align: start;
+
+    justify-content: space-between;
+  }
+
+  @include mediaSTablet {
+    align-items: start;
+  }
+}
+
+.card__img-box {
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  @include mediaSTablet {
+    max-width: 197px;
+    height: 197px;
+  }
+
+  @include mediaTablet {
+    max-width: 222px;
+    height: 222px;
+  }
+
+  @include mediaScreen {
+    max-width: 100%;
+    height: 311px;
+  }
+  .img__item {
+    width: 100%;
+    height: 100%;
+  }
+}
+.card__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+
+  margin-bottom: 20px;
+
+  @include mediaXSTablet {
+    font-size: 24px;
+  }
+
+  @include mediaSTablet {
+    font-size: 20px;
+  }
+
+  @include mediaTablet {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  @include mediaScreen {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 40px;
+  }
+
+  @include mediaFullHd {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 48px;
+  }
+}
+
+.first {
+  @include mediaScreen {
+    margin-bottom: 5px;
+  }
+
+  @include mediaFullHd {
+    margin-bottom: 10px;
+  }
+}
+
+.card__text {
+  font-size: 13px;
+  margin-bottom: 15px;
+
+  @include mediaXSTablet {
+    font-size: 14px;
+  }
+
+  @include mediaTablet {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  @include mediaScreen {
+    font-size: 20px;
+    max-width: 450px;
+    margin-bottom: 25px;
+  }
+
+  @include mediaFullHd {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+.card__price {
+  width: 170px;
+  height: 37px;
+  border-radius: 5px;
+  background-color: #eee;
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  @include mediaXSTablet {
+    width: 205px;
+    height: 45px;
+  }
+
+  @include mediaScreen {
+    width: 240px;
+    height: 45px;
+  }
+
+  & .h4 {
+    color: $accent;
+    font-size: 18px;
+    font-weight: 400;
+
+    @include mediaXSTablet {
+      font-size: 22px;
+    }
+
+    @include mediaTablet {
+      font-size: 24px;
+    }
+
+    @include mediaScreen {
+      font-size: 30px;
+    }
+
+    @include mediaFullHd {
+      font-size: 35px;
+    }
+  }
+
+  & .price__text {
+    color: #546269;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include mediaXSTablet {
+      font-size: 16px;
+    }
+
+    @include mediaScreen {
+      font-size: 18px;
+    }
+
+    @include mediaFullHd {
+      font-size: 20px;
+    }
+  }
+}
